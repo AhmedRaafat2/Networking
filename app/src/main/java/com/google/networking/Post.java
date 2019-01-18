@@ -1,6 +1,8 @@
 package com.google.networking;
 
-public class Post {
+import java.io.Serializable;
+
+public class Post implements Serializable {
     private  String title,body;
     private int userId,id;
 

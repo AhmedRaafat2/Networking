@@ -13,11 +13,11 @@ import java.util.Scanner;
 
 public class JsonParser {
 
-    public String getAllPosts(){
+    public String getAllPosts(String url_link){
 
         StringBuilder postsStringBuilder = new StringBuilder();
         try {
-            URL url = new URL("https://jsonplaceholder.typicode.com/posts");
+            URL url = new URL(url_link);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             if(connection.getResponseCode() == 200){
                 Scanner scanner = new Scanner(connection.getInputStream());
